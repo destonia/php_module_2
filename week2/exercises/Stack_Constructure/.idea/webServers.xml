@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cffd56aa-45de-47d4-8285-a1d0a51a17c6" name="local" url="http://localhost/module2/week2/exercises/Stack_Constructure">
+        <fileTransfer mountedRoot="$PROJECT_DIR$/../../../.." accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Class_Animal_interface_edible/demo/php-abstract-animal-interface-edible" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Interface_comparable" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/interface-comparable" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/php-abstract-animal-interface-edible" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/php-interface-comparable" vcs="Git" />
+  </component>
+</project>

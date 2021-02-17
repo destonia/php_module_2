@@ -1,0 +1,22 @@
+<?php
+include ('Stack.php');
+$exStack = new Stack();
+$exStack->push(1);
+$exStack->push(3);
+$exStack->push(4);
+$exStack->push(5);
+$exStack->push(2);
+$exStack->push(3);
+$exStack->pop();
+$exStack->pop();
+$exStack->pop();
+$exStack->push(7);
+$exStack->push(8);
+$exStack->isEmpty();
+$exStack->pop();
+$exStack->pop();
+$exStack->pop();
+$exStack->pop();
+$exStack->isEmpty();
+$exStack->top();
+var_dump($exStack);
