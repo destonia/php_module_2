@@ -1,6 +1,23 @@
 #### module2-reflection
 ***
+# Reflection 24/2
+### Nguyên tắc thiết kế CSDL
+- Chính xác
+- Tránh trùng lặp
+- Dễ hiểu
+- Chọn đúng thuộc tính và kiểu thuộc tính
+- Chọn đúng mối quan hệ
+### Các bước thiết kế CSDL
+- Xác định yêu cầu nghiệp vụ
++ Đây là bước đầu tiên cũng là bước quan trọng nhất. Xác định yêu cầu một cách đầy đủ, cụ thể sẽ giúp cho việc thiết kế CSDL trở lên dễ dàng hơn. Luôn đặt ra câu hỏi:
+> CSDL sẽ được sử dụng như thế nào?
+> Những thông tin gì cần được lưu vào CSDL?
+- Xây dựng lược đồ thực thể-liên kết ER
+- Xây dựng lược đồ quan hệ
+- Hệ quản trị CSDL
 
+
+***
 # Reflection 23/2
 ## Sự khác nhau giữa File và CSDL
 ### File
