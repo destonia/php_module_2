@@ -1,5 +1,14 @@
 #### module2-reflection
 ***
+# Reflection 01/03
+## Từ khóa JOIN: để join 2 bảng thì 2 bảng phải có điểm chung, liên kết với nhau khóa chính, khóa phụ.
+## Chúng ta có hai loại tham số chính trong Procedure đó là:
+
+- IN: Đây là chế độ mặc định (nghĩa là nếu bạn không định nghĩa loại nào thì nó sẽ hiểu là IN). Khi bạn sử dụng mức này thì nó sẽ được bảo vệ an toàn, có nghĩa là sẽ không bị thay đổi nếu như trong Procedure có tác động đến
+- OUT: Chế độ này nếu như trong Procedure có tác động thay đổi thì nó sẽ thay đổi theo. Nhưng có điều đặc biệt là dù trước khi truyền vào mà bạn gán giá trị cho biến đó thì vẫn sẽ không nhận được vì mặc định nó luôn hiểu giá trị truyền vào là NULL.
+- INOUT: Đây là sự kết hợp giữa IN và OUT. Nghĩa là có thể gán giá trị trước và có thể bị thay đổi nếu trong Procedure có tác động tới
+
+***
 # Reflection 24/2
 ### Nguyên tắc thiết kế CSDL
 - Chính xác
