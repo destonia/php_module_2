@@ -1,5 +1,15 @@
 #### module2-reflection
 ***
+# Reflection 02/03
+- PHP Data Objects-PDO cung cấp các cơ chế Prepared Statements, Stored Procedures và giúp bạn thao tác với database thông qua các Object (đối tượng) làm cho công việc trở nên hiệu quả, dễ dàng hơn.
+- Thêm mới (insert) và cập nhật (update) dữ liệu là những hoạt động cơ bản khi thao tác với database. Với PDO, mỗi hoạt động insert hay update được thực hiện qua 3 quá trình sử dụng cơ chế Prepared Statement
+
+>> - Prepare statement: Chuẩn bị một câu lệnh SQL làm khung/mẫu được gọi là Prepared Statement với các Placeholder (có thể hiểu placeholder đóng vai trò như tham số của các phương thức khi bạn khai báo hàm)
+>> - Bind params: Gắn giá trị thực vào các placeholder (tương tự như khi bạn truyền giá trị vào các tham số của phương thức)
+>> - Execute: Thực thi câu lệnh.
+
+
+***
 # Reflection 01/03
 ## Từ khóa JOIN: để join 2 bảng thì 2 bảng phải có điểm chung, liên kết với nhau khóa chính, khóa phụ.
 ## Chúng ta có hai loại tham số chính trong Procedure đó là:

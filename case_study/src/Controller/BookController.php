@@ -2,47 +2,52 @@
 
 namespace App\Controller;
 
-use App\Model\ProductModel;
+use App\Model\BookModel;
 
-class ProductController
+class BookController
 {
-    protected $productModel;
+    protected $bookModel;
 
     public function __construct()
     {
-        $this->productModel = new ProductModel();
+        $this->bookModel = new BookModel();
     }
 
     public function index()
     {
-        // Lấy tất hoá đơn từ DB ra.
-        $products = $this->productModel->getAll();
+        //Lấy tất hoá đơn từ DB ra
+        $books = $this->bookModel->getAll();
 
-        include "src/View/product/product-list.php";
+        include "src/View/Book/book_list.php";
     }
 
     public function create()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            include "src/View/product/product-show-create.php";
+            include "src/View/Book/book_create.php";
         } else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $product_code = $_REQUEST['product_code'];
-            $product_name = $_REQUEST['product_name'];
-            $list_price = $_REQUEST['list_price'];
-            $discontinued = $_REQUEST['discontinued'];
-            $standard_cost = $_REQUEST['standard_cost'];
+            $bookId = $_REQUEST['book_id'];
+            $bookName = $_REQUEST['book_name'];
+            $price = $_REQUEST['price'];
+            $publisher = $_REQUEST['publisher'];
+            $author = $_REQUEST['author'];
+            $copy = $_REQUEST['copy'];
             $category = $_REQUEST['category'];
-            $supplier_ids = $_REQUEST['supplier_ids'];
+            $position = $_REQUEST['position'];
 
-            $result = $this->productModel->create_product(
-                $product_code,
-                $product_name,
-                $list_price,
-                $discontinued,
-                $standard_cost,
+            $this->bookModel->createBook(
+                $bookId,
+                $bookName,
+                $price,
+                $publisher,
+                $author,
+                $copy,
                 $category,
-                $supplier_ids
+                $position
+
             );
+            include "src/View/Book/book_create.php";
+
             $this->redirectToList();
         }
     }

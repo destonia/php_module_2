@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Model;
+
 use PDO;
-class ProductModel
+
+class BookModel
 {
     protected $database;
 
@@ -32,26 +34,25 @@ class ProductModel
 
     public function getAll()
     {
-        $sql = "SELECT * FROM v_products_suppliers order by id DESC";
+        $sql = "SELECT * FROM Sach ";
         $stmt = $this->database->query($sql);
         return $stmt->fetchAll();
     }
 
-    public function create_product($product_code, $product_name, 
-                                    $list_price, $discontinued, $standard_cost, $category, $supplier_ids)
+    public function createBook($bookId, $bookName, $price, $publisher, $author, $copy, $category, $position)
     {
-        $sql = 'INSERT INTO products (product_code, product_name, list_price, discontinued, standard_cost, 
-                                category, supplier_ids) 
-                VALUES (:product_code, :product_name, :list_price, :discontinued, :standard_cost, :category, :supplier_ids)';
+        $sql = 'INSERT INTO products (MaSach,TenSach,GiaTien,NhaXuatBan,TacGia,SoLuongBanSao,LoaiSach,Vitri) 
+                VALUES (:book_id, :book_name, :price, :publisher, :author, :copy, :category, :position)';
 
         $stmt = $this->database->prepare($sql);
-        $stmt->bindParam(":product_code", $product_code);
-        $stmt->bindParam(":product_name", $product_name);
-        $stmt->bindParam(":list_price", $list_price);
-        $stmt->bindParam(":discontinued", $discontinued);
-        $stmt->bindParam(":standard_cost", $standard_cost);
+        $stmt->bindParam(":book_id", $bookId);
+        $stmt->bindParam(":book_name", $bookName);
+        $stmt->bindParam(":price", $price);
+        $stmt->bindParam(":publisher", $publisher);
+        $stmt->bindParam(":author", $author);
+        $stmt->bindParam(":copy", $copy);
         $stmt->bindParam(":category", $category);
-        $stmt->bindParam(":supplier_ids", $supplier_ids);
+        $stmt->bindParam(":position", $position);
         $stmt->execute();
         return $stmt->fetchAll();
     }
